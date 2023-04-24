@@ -8,6 +8,8 @@ packages = [{include = "notas_musicais"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+typer = "^0.7.0"
+rich = "^13.3.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -40,4 +42,4 @@ lint = "blue --check --diff . && isort --check --diff ."
 docs = "mkdocs serve"
 pre_test = "task lint"
 test = "pytest -s -x --cov=notas_musicais -vv"
-post_test = "coverage html && firefox htmlcov/index.html -d"
+post_test = "coverage html"
